@@ -15,39 +15,29 @@
 	<div class="container mt-4">
 		<h1>IoC Container</h1>
 		
-		<h3>Add New Registration for</h3>
+		<h3>Add New Class for ${course.name }</h3>
 		
 		<div class="row">
 			<div class="col-4">
 		
-				<c:url var="save" value="/registration-edit">
-
+				<c:url var="save" value="/class-edit">
+ 					<c:param name="courseId" value="${ course.id }"></c:param>
 				</c:url>
 					<form action="${ save }" method="post">
 						<div class="mb-3">
-							<label class="form-label">Open Class ID</label>
-								<input type="text" name="openClassId"  value =${ classes.id } required="required" disabled="disabled" class="form-control">
-						</div>
-						
-						<div class="mb-3">
-							<label class="form-label">Course Name</label>
-								<input type="text" name="openClassId" value = ${ classes.course.name } required="required" disabled="disabled" class="form-control">
+							<label class="form-label">Course ID</label>
+								<input type="text" name="courseId"  placeholder= ${ course.id } required="required" disabled="disabled" class="form-control">
 						</div>
 						
 						
 						<div class="mb-3">
-							<label class="form-label">Student Name</label>
-								<input type="text" name="student"  placeholder="Enter Student Name" required="required" class="form-control">
+							<label class="form-label">Start Date</label>
+								<input type="date" name="start"  placeholder="Enter Start Date" required="required"  class="form-control">
 						</div>
 						
 						<div class="mb-3">
-							<label class="form-label">Phone Number</label>
-								<input type="text" name="phone"  placeholder="Enter Phone Number" required="required" class="form-control">
-						</div>
-						
-						<div class="mb-3">
-							<label class="form-label">Email</label>
-								<input type="text" name="email"  placeholder="Enter Email" required="required" class="form-control">
+							<label class="form-label">Teacher</label>
+								<input type="text" name="teacher"  placeholder="Enter Teacher" required="required" class="form-control">
 						</div>
 						
 						<input type="submit" value="Save Class" class="btn btn-primary">

@@ -21,7 +21,7 @@
 			<div class="col-4">
 		
 				<c:url var="save" value="/registration-edit">
-
+					<c:param name="classId" value="${ classes.id }"></c:param>
 				</c:url>
 					<form action="${ save }" method="post">
 						<div class="mb-3">
@@ -29,15 +29,10 @@
 								<input type="text" name="openClassId"  value =${ classes.id } required="required" disabled="disabled" class="form-control">
 						</div>
 						
-						<div class="mb-3">
-							<label class="form-label">Course Name</label>
-								<input type="text" name="openClassId" value = ${ classes.course.name } required="required" disabled="disabled" class="form-control">
-						</div>
-						
 						
 						<div class="mb-3">
 							<label class="form-label">Student Name</label>
-								<input type="text" name="student"  placeholder="Enter Student Name" required="required" class="form-control">
+								<input type="text" name="student"  placeholder="Enter Student Name"  required="required" class="form-control">
 						</div>
 						
 						<div class="mb-3">

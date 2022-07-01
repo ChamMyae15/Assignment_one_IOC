@@ -26,13 +26,13 @@
 					<form action="${ save }" method="post">
 						<div class="mb-3">
 							<label class="form-label">Course ID</label>
-								<input type="text" name="courseId"  placeholder="Enter Course ID" required="required" class="form-control">
+								<input type="text" name="courseId"  placeholder= ${ course.id } required="required" readonly="readonly" class="form-control">
 						</div>
 						
 						
 						<div class="mb-3">
 							<label class="form-label">Start Date</label>
-								<input type="text" name="start"  placeholder="Enter Start Date" required="required" class="form-control">
+								<input type="date" name="start"  placeholder="Enter Start Date" required="required" class="form-control">
 						</div>
 						
 						<div class="mb-3">
